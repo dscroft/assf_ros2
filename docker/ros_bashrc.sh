@@ -4,8 +4,8 @@
 export PYTHONWARNINGS="ignore:easy_install command is deprecated"
 
 # To be appended to /root/.bashrc
-source /opt/ros/jazzy/setup.bash
+source /opt/ros/humble/setup.bash
 source /usr/share/colcon_cd/function/colcon_cd.sh
 source /root/dev/turtlesim/turtlesim_ws/install/setup.bash
 
-export _colcon_cd_root=/opt/ros/jazzy
+export _colcon_cd_root=/opt/ros/humble

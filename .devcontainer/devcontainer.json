@@ -13,5 +13,6 @@
         "6080": {
             "label": "desktop"
         }
-    }
+    },
+    "workspaceFolder": "/root/dev/turtlesim"
 }

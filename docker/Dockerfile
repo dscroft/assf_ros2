@@ -21,6 +21,8 @@ RUN sudo mkdir -p /etc/apt/keyrings && \
     sudo apt-get update && \
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y webots
 
+RUN sudo python3 -m pip install tornado simplejpeg
+
 RUN echo "Port 2201" >> /etc/ssh/sshd_config
 
 RUN mkdir -p /root/dev/turtlesim

@@ -1,13 +1,12 @@
 services:
-  rosdev-ros2:
+  turtlesim-ros2:
     build:
       context: ./docker
       dockerfile: Dockerfile
-    container_name: rosdev-ros2
+    container_name: turtlesim-ros2
     tty: true
     volumes:
-      - ./:/root/dev/rosdev
+      - ./:/root/dev/turtlesim
     ports:
       - 2201:2201
       - 6080:6080
-      - 8888:8888

@@ -12,13 +12,13 @@
         {
             "label": "Emulate data",
             "type": "shell",
-            "command": "bash /home/$USER/emulate_data.sh",
+            "command": "bash /home/$(whoami)/emulate_data.sh",
             "problemMatcher": []
         },
         {
             "label": "Run visualiser",
             "type": "shell",
-            "command": "bash /home/$USER/run_visualiser.sh",
+            "command": "bash /home/$(whoami)/run_visualiser.sh",
             "problemMatcher": []
         }
     ]

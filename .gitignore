@@ -7,3 +7,4 @@ turtlesim_ws/log/*
 backend_ws/build/*
 backend_ws/install/*
 backend_ws/log/*
+bagfile/*

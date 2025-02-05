@@ -5,7 +5,8 @@ RUN apt update && apt install -y --no-install-recommends \
     xauth \
     snapd \
     python3-colcon-common-extensions \
-    python3-pip
+    python3-pip \
+    wget
 
 RUN echo root:robotics | chpasswd
 

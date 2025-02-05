@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zipfile="/tmp/rosbag.zip"
-bagfile="/home/$USER/bagfile/"
+bagfile="/home/$(whoami)/bagfile/"
 url="https://livewarwickac-my.sharepoint.com/:u:/g/personal/u2273650_live_warwick_ac_uk/EQJ9C5Gok7VHlfo-OXWzdVYBDvJJWbBXhrgMUhJPy0HXpg?download=1"
 
 # if bagfile directory does not exist, create it

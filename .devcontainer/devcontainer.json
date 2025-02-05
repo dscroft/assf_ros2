@@ -5,13 +5,13 @@
     "features": {
         "ghcr.io/devcontainers/features/desktop-lite:1": {}
     },
-    "forwardPorts": [2201, 6080],
+    "forwardPorts": [2201, 8888],
     "portsAttributes": {
         "2201": {
             "label": "SSH"
         },
-        "6080": {
-            "label": "desktop"
+        "8888": {
+            "label": "visualiser"
         }
     },
     "workspaceFolder": "/home/root"

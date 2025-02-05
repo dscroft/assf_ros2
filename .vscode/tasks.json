@@ -8,7 +8,18 @@
             "type": "shell",
             "command": "$BROWSER 'https://${env:CODESPACE_NAME}-8888.app.github.dev/?%2Fvehicle%2Fvelodyne%2Fpoint_cloud=sensor_msgs%2Fmsg%2FPointCloud2'",
             "problemMatcher": [],
-          }
-        
+        },
+        {
+            "label": "Emulate data",
+            "type": "shell",
+            "command": "bash /home/$USER/emulate_data.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run visualiser",
+            "type": "shell",
+            "command": "bash /home/$USER/run_visualiser.sh",
+            "problemMatcher": []
+        }
     ]
 }

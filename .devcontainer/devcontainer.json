@@ -1,7 +1,7 @@
 {
-    "name": "Turtlesim ROS2",
+    "name": "ASSF ROS2",
     "dockerComposeFile": "../docker-compose.yml",
-    "service": "turtlesim-ros2",
+    "service": "assf-ros2",
     "features": {
         "ghcr.io/devcontainers/features/desktop-lite:1": {}
     },

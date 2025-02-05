@@ -27,6 +27,8 @@ RUN echo "Port 2201" >> /etc/ssh/sshd_config
 
 RUN mkdir -p /home/root
 
+RUN git config --global --add safe.directory /home/root
+
 COPY ssh_entry.sh /root/.bash_profile
 COPY ros_bashrc.sh /root/ros_bashrc.sh
 RUN echo "source /root/ros_bashrc.sh" >> /root/.bashrc

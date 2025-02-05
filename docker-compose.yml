@@ -6,7 +6,7 @@ services:
     container_name: turtlesim-ros2
     tty: true
     volumes:
-      - ./:/root/dev/turtlesim
+      - ./:/home/root
     ports:
       - 2201:2201
       - 6080:6080

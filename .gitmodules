@@ -1,3 +1,0 @@
-[submodule "backend_ws/src/rosboard"]
-	path = backend_ws/src/rosboard
-	url = https://github.com/dscroft/rosboard.git

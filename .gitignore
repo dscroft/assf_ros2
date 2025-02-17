@@ -11,3 +11,6 @@ bagfile/*
 cloud_ws/build/*
 cloud_ws/install/*
 cloud_ws/log/*
+simple_ws/build/*
+simple_ws/install/*
+simple_ws/log/*

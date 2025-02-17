@@ -1,72 +1,45 @@
-# ROS2 Turtlesim
+# ROS2 ASSF Lab
 
-## Overview
-This repository serves as an introduction to ROS2 via turtlesim.
+This lab assumes that you have some familiarity with the Linux terminal, 
+in particular directory navigation commands.
 
-Turtlesim simulates a robot via a turtle that can move around a canvas. The turtle can be commanded to move forward, backward, and rotate by setting its velocity. The turtle can also draw on the canvas by setting the pen properties.
+This lab will take you through the process of:
 
-The repository contains a Dockerfile and a GitHub Codespaces configuration file to create a development environment for ROS2. The repository also contains a custom node with starter code to move the turtle forward in a straight line.
+- Building a ROS2 workspace.
+- Running ROS2 nodes.
+- Examining ROS2 nodes and topics.
+- Combining nodes from multiple ROS2 packages.
+- Editing ROS2 nodes.
 
-*Tip:* To view this README in a more readable format while in VS Code or GitHub Codespaces, right-click on this file's name and select "Open Preview".
+[Running ROS2 in a Docker container via a GitHub Codespace](.guide/CODESPACES.md)
 
-## Setup
-You can work with this repository in two ways: [locally](#local-development) or in [GitHub Codespaces](#github-codespaces). Follow the instructions below based on your preference.
+[Linux terminal commands](.guide/TERMINAL.md)
 
-### Local Development
-1. Install the following items:
-    1. [Docker](https://www.docker.com)
-    2. If using Mac, [XQuartz](https://www.xquartz.org)
-    3. If using Windows, [MobaXterm](https://mobaxterm.mobatek.net)
-        - Open MobaXterm > click on Settings > go the X11 tab > uncheck RANDR.
-        - Execute all commands below in the MobaXterm terminal.
-2. Clone the repository.
-3. Open a terminal and change your directory to the repository.
-4. Run the following command to build the Docker image and start the container:
-    ```bash
-    docker-compose up -d
-    ```
-5. SSH into the container:
-    ```bash
-    ssh -XY -p 2201 root@localhost
-    ```
-    Password: `robotics`
-6. Make sure you are in the following directory.
-    ```bash
-    /root/dev/turtlesim
-    ```
-7. [Build the workspace.](#building-the-workspace)
-8. Perform steps 5-6 again for each new terminal you open.
-8. After you have finished working, run the following command in a terminal on your local machine (not the container) to stop the container. Make sure you are in the repository directory.
-    ```bash
-    docker-compose down
-    ```
+[ROS introduction](.guide/ROS.md)
 
-### GitHub Codespaces
-1. Open this repository on GitHub.
-2. To create the codespace for the first time (skip to step 3 if you've already created the codespace):
-    1. Click the green "Code" button.
-    2. Switch to the "Codespaces" tab.
-    3. Click the "+" button to create a new codespace.
-    4. A new tab will open with the codespace. It will take approximately five minutes to build the container and prepare the codespace.
-    5. Once the codespace is ready, you will see the terminal in the bottom of the window, and you will be in the `/workspaces/{repo-name}` directory.
-    6. If you are prompted to install the recommended extensions, click "Install All" to install the recommended extensions. If you are not prompted, you can install the recommended extensions by clicking the extensions icon on the left sidebar, searching for "@recommended" in the search bar, and clicking the cloud icon next to "Workspace Recommendations".
-3. To open the codespace after it has been created:
-    1. Click the green "Code" button.
-    2. Switch to the "Codespaces" tab.
-    3. Click on the codespace you want to open.
-    4. Optional: If you would like to open the codespace in VS Code on your local machine, perform steps 1-2, click the three dots on the right side of the codespace and select "Open with Visual Studio Code".
-4. Make sure you are in the following directory:
-    ```bash
-    cd /workspaces/{repo-name}
-    ```
-    Replace `{repo-name}` with the name of the repository you created the codespace from.
-5. [Build the workspace.](#building-the-workspace)
-6. After you have finished working, close the tab with the codespace or close the VS Code window if you opened the codespace in VS Code.
-7. To stop the codespace:
-    1. Go back to the repository on GitHub.
-    2. Click the "Code" button.
-    3. Switch to the "Codespaces" tab.
-    4. Click the three dots on the right side of the codespace and select "Stop codespace".
+[Examining ROS environment](.guide/ROS_EXAMINE.md)
+
+## Structure
+
+
+
+## Mix and match
+
+One of the key benefits of ROS is that the standardised message types allow 
+you to mix and match nodes from different packages. 
+This means that you can use a Python node to publish messages that are consumed by a 
+C++ node or vice versa.
+
+It also means that you can reuse nodes from other projects without needed to modify them. 
+This is particularly useful when you are working on a project that requires a specific 
+sensor or actuator that has already been implemented in another project.
+
+**Try running combining nodes from the py_pubsub and cpp_pubsub packages by running one node from each.**
+
+- py_pubsub -> cpp_pubsub
+- cpp_pubsub -> py_pubsub
+
+
 
 ### Building the Workspace
 Once you've made sure you're in the correct directory, run the following command to build the workspace:

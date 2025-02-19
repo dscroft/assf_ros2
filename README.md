@@ -17,27 +17,15 @@ This lab will take you through the process of:
 
 [ROS introduction](.guide/ROS.md)
 
-[Examining ROS environment](.guide/ROS_EXAMINE.md)
+[Building ROS environment](.guide/ROS_BUILD.md)
+
+[Simple activity](.guide/ROS_SIMPLE.md)
+
+
 
 ## Structure
 
 
-
-## Mix and match
-
-One of the key benefits of ROS is that the standardised message types allow 
-you to mix and match nodes from different packages. 
-This means that you can use a Python node to publish messages that are consumed by a 
-C++ node or vice versa.
-
-It also means that you can reuse nodes from other projects without needed to modify them. 
-This is particularly useful when you are working on a project that requires a specific 
-sensor or actuator that has already been implemented in another project.
-
-**Try running combining nodes from the py_pubsub and cpp_pubsub packages by running one node from each.**
-
-- py_pubsub -> cpp_pubsub
-- cpp_pubsub -> py_pubsub
 
 
 
@@ -208,4 +196,3 @@ You can append the `-h` flag to any command to view a message describing the com
 
 ## Additional Resources
 - [ROS2 Documentation](https://docs.ros.org/en/jazzy/index.html)
-- [Bash Command Cheatsheet](https://www.educative.io/blog/bash-shell-command-cheat-sheet)

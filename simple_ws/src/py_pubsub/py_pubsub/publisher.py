@@ -5,12 +5,11 @@ from std_msgs.msg import String
 
 
 class MinimalPublisher(Node):
-
     def __init__(self):
         super().__init__('minimal_publisher')
         
         # this is the publisher object that we are going to be sending messages from
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        self.publisher_ = self.create_publisher(String, 'chatter', 10)
         timer_period = 0.5  # seconds
 
         # create a timer that will call the timer_callback function every 0.5 seconds
@@ -22,13 +21,13 @@ class MinimalPublisher(Node):
     def timer_callback(self):
         # create a new message and set the contents
         msg = String()
-        msg.data = 'Hello World: %d' % self.i
+        msg.data = f'Hello World: {self.i}'
 
         # publish the message to the topic we specified earlier
         self.publisher_.publish(msg)
 
         # logging and incrementing the counter
-        self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.get_logger().info(f'Publishing: "{msg.data}"')
         self.i += 1
 
 

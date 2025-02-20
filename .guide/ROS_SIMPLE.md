@@ -58,7 +58,7 @@ It also means that you can reuse nodes from other projects without needed to mod
 This is particularly useful when you are working on a project that requires a specific 
 sensor or actuator that has already been implemented in another project.
 
-<div style="border: 1px solid green; padding: 10px; margin: 10px;">
+<div style="border: 4px solid green; padding: 10px; margin: 10px;">
 
 **Try running combining nodes from the py_pubsub and cpp_pubsub packages by running one node from each.**
 
@@ -67,11 +67,5 @@ You will need to use two terminal windows, one to run each node.
 - py_pubsub -> cpp_pubsub
 - cpp_pubsub -> py_pubsub
 </div>
-
-
-
-
-
-
 
 [Back to README.md](../README.md)

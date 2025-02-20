@@ -1,25 +1,23 @@
-import pcl
-import random
 import rclpy
 from rclpy.node import Node
 import sensor_msgs_py.point_cloud2
 from sensor_msgs.msg import PointCloud2
+
+import random
 import numpy as np
 
 class Filter(Node):
     def __init__(self):
         """
-        Create a ROS Node that extracts a table (or other flat surface) from a point cloud.
+        ROS Node that filters the ego vehicle from a point cloud.
 
         Subscriptions
         -------------
-        pcl_handler (sensor_msgs/msg/PointCloud2): The point cloud to publish
+        ~/input (sensor_msgs/msg/PointCloud2): The point cloud to republish
 
         Publishers
         ----------
-        pcl_cropped (sensor_msgs/msg/PointCloud2): The cropped point cloud
-        pcl_voxel   (sensor_msgs/msg/PointCloud2): The voxelized point cloud
-        pcl_inplane (sensor_msgs/msg/PointCloud2): The plane extracted from the point cloud
+        ~/output (sensor_msgs/msg/PointCloud2): The filtered point cloudd
         """
         super().__init__("py_filter")
         self.__sub = self.create_subscription(PointCloud2, "~/input", self.__callback, 10)
@@ -39,8 +37,6 @@ class Filter(Node):
         # - for pcl
         #         pcl.PointCloud(numpy_cloud)
 
-
-
         # === PROCESSING ===
         self.get_logger().info(f"Processing {len(numpy_cloud)} points")
 
@@ -53,9 +49,8 @@ class Filter(Node):
         out_cloud = []
         random_point = lambda: [ random.uniform(-3, 3) for _ in range(3) ]
         for i in range(1000):
-            out_cloud.append(random_point())
-
- 
+            x, y, z = random_point()
+            out_cloud.append((x,y,z))
 
         # === PUBLISH OUTPUT ===
         self.get_logger().info(f"Publishing {len(out_cloud)} points")

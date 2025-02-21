@@ -1,6 +1,6 @@
 #!/bin/bash
-
-ws="/home/$USER/visualise_ws"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ws="$DIR/.visualise_ws"
 
 # create workspace
 mkdir -p $ws/src

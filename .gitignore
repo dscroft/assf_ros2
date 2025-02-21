@@ -7,10 +7,11 @@ turtlesim_ws/log/*
 backend_ws/build/*
 backend_ws/install/*
 backend_ws/log/*
-bagfile/*
+.bagfile/*
 cloud_ws/build/*
 cloud_ws/install/*
 cloud_ws/log/*
 simple_ws/build/*
 simple_ws/install/*
 simple_ws/log/*
+.visualise_ws/*

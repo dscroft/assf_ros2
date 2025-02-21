@@ -1,7 +1,9 @@
 #!/bin/bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 zipfile="/tmp/rosbag.zip"
-bagfile="/home/$(whoami)/bagfile/"
+bagfile="$DIR/.bagfile/"
 url="https://livewarwickac-my.sharepoint.com/:u:/g/personal/u2273650_live_warwick_ac_uk/EQJ9C5Gok7VHlfo-OXWzdVYBDvJJWbBXhrgMUhJPy0HXpg?download=1"
 
 # if bagfile directory does not exist, create it

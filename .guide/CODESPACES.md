@@ -27,8 +27,8 @@ For this activity we will be running ROS2 in a docker container via a GitHub Cod
     2. Switch to the "Codespaces" tab.
     3. Click the "+" button to create a new codespace.
     4. A new tab will open with the codespace. It will take approximately five minutes to build the container and prepare the codespace.
-    5. Once the codespace is ready, you will see the terminal in the bottom of the window, and you will be in the `/workspaces/{repo-name}` directory.
-    6. If you are prompted to install the recommended extensions, click "Install All" to install the recommended extensions. If you are not prompted, you can install the recommended extensions by clicking the extensions icon on the left sidebar, searching for "@recommended" in the search bar, and clicking the cloud icon next to "Workspace Recommendations".
+    5. Once the codespace is ready, you will see the terminal in the bottom of the window.
+    6. If you are prompted to install the recommended extensions, click "Install All" to install the recommended extensions.
 
 ![Create codespace](images/create_codespace.jpg)
 

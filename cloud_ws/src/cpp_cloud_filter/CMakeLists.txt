@@ -14,12 +14,6 @@ ament_auto_find_build_dependencies()
 ament_auto_add_executable(filter src/filter.cpp)
 target_compile_features(filter PUBLIC cxx_std_17)  # Require C99 and C++17
 
-install(TARGETS filter
-  DESTINATION lib/${PROJECT_NAME})
-
-install(DIRECTORY launch/
-DESTINATION share/${PROJECT_NAME}/)
-
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -32,4 +26,4 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-ament_package()
+ament_auto_package()

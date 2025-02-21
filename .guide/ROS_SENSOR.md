@@ -118,7 +118,6 @@ There a range of data uses such as localisation and mapping where were would not
 Make sure to check your changes by viewing them in the visualiser. 
 You will need to add your output topic to the visualiser page by clicking on the ≡ icon.
 
-
 <details>
     <summary>Py Solutions</summary>
 

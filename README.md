@@ -23,7 +23,5 @@ This lab will take you through the process of:
 
 [Sensor activity](.guide/ROS_SENSOR.md)
 
+[Conclusion](.guide/CONCLUSION.md)
 
-
-## Additional Resources
-- [ROS2 Documentation](https://docs.ros.org/en/humble/index.html)

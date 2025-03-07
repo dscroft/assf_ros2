@@ -17,8 +17,6 @@ This lab will take you through the process of:
 
 [ROS introduction](.guide/ROS.md)
 
-[Building ROS environment](.guide/ROS_BUILD.md)
-
 [Simple activity](.guide/ROS_SIMPLE.md)
 
 [Sensor activity](.guide/ROS_SENSOR.md)

@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake_auto REQUIRED)
+find_package(PCL REQUIRED)
 
 # using ament_auto to automatically handle dependencies based on the package.xml file
 ament_auto_find_build_dependencies()

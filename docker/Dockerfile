@@ -24,7 +24,7 @@ RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
 
 RUN sudo python3 -m pip install tornado simplejpeg
 
-RUN sudo apt install -y libpcl-dev
+RUN sudo apt install -y libpcl-dev ros-humble-pcl-conversions ros-humble-sensor-msgs
 
 RUN echo "Port 2201" >> /etc/ssh/sshd_config
 

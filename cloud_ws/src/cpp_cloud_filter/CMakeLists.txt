@@ -7,13 +7,15 @@ endif()
 
 # find dependencies
 find_package(ament_cmake_auto REQUIRED)
-find_package(PCL REQUIRED)
+find_package(PCL 1.10 REQUIRED)
 
 # using ament_auto to automatically handle dependencies based on the package.xml file
 ament_auto_find_build_dependencies()
 
 ament_auto_add_executable(filter src/filter.cpp)
-target_compile_features(filter PUBLIC cxx_std_17)  # Require C99 and C++17
+#target_compile_features(filter PUBLIC cxx_std_17)  # Require C99 and C++17
+
+target_link_libraries(filter ${PCL_LIBRARIES})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
